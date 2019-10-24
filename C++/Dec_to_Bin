@@ -1,0 +1,23 @@
+#include<iostream>
+#include<stack>
+using namespace std;
+int main ()
+{
+    int num;
+    stack<int> s;
+    cout<<"\nEnter the decimal number ";
+    cin>>num;
+    while(num>0)
+    {
+        int rem=num%2;
+        s.push(rem);
+        num=num/2;
+    }
+    cout<<"\nThe decimal equivalent is ";
+    while(!s.empty())
+    {
+        cout<<s.top();
+        s.pop();
+    }
+    return 0;
+}
